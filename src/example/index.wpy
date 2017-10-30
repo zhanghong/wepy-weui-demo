@@ -49,6 +49,12 @@
         height: auto;
       }
     }
+    .page__ft{
+      image{
+        width: 84px;
+        height: 19px;
+      }
+    }
   }
 </style>
 <template>
@@ -78,7 +84,7 @@
       </view>
     </view>
     <view class="page__ft">
-      <image src="../images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+      <image src="../images/icon_footer.png"></image>
     </view>
   </view>
 </template>

@@ -1,3 +1,14 @@
+<style lang="less">
+  .weui-vcode-img.vcode-4{
+    width:108px;
+  }
+  .weui-textarea.area-default{
+    height:3.3em;
+  }
+  .weui-cell__hd.w-105{
+    width: 105px;
+  }
+</style>
 <template>
   <view class="index page">
     <view class="page__hd">
@@ -89,7 +100,7 @@
             <input class="weui-input" placeholder="请输入验证码"/>
           </view>
           <view class="weui-cell__ft">
-            <image class="weui-vcode-img" src="../images/vcode.png" style="width:108px"></image>
+            <image class="weui-vcode-img vcode-4" src="../images/vcode.png"></image>
           </view>
         </view>
       </view>
@@ -133,7 +144,7 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="请输入文本" style="height:3.3em"></textarea>
+            <textarea class="weui-textarea area-default" placeholder="请输入文本"></textarea>
             <view class="weui-textarea-counter">0/200</view>
           </view>
         </view>
@@ -142,7 +153,7 @@
       <view class="weui-cells__title">选择</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd" style="width: 105px">
+          <view class="weui-cell__hd w-105">
             <picker @change="bindCountryCodeChange" value="{{countryCodeIndex}}" range="{{countryCodes}}">
               <view class="weui-select">{{countryCodes[countryCodeIndex]}}</view>
             </picker>

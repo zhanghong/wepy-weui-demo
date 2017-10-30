@@ -1,3 +1,54 @@
+<style lang="less">
+  .badge-font-0{
+    font-size: 0;
+    .right-content{
+      display: inline-block;
+      vertical-align:middle;
+      font-size: 17px;
+    }
+    .weui-badge_dot{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  .badge-with-img{
+    .weui-cell__hd{
+      position: relative;
+      margin-right: 10px;
+      image{
+        width: 50px;
+        height: 50px;
+        display: block;
+      }
+      .weui-badge{
+        position: absolute;
+        top: -.4em;
+        right: -.4em;
+      }
+    }
+    .weui-cell__bd{
+      .text-desc{
+        font-size: 13px;
+        color: #888888;
+      }
+    }
+  }
+  .cell-badge-line{
+    .text-content{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .weui-badge{
+      margin-left: 8px;
+    }
+    .weui-badge.badge-news{
+      margin-left: 5px;
+    }
+  }
+  image{
+    margin: 4px 0;
+  }
+</style>
 <template>
   <view class="page">
     <view class="page__hd">
@@ -9,48 +60,48 @@
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_access">
           <view class="weui-cell__bd">单行列表</view>
-          <view class="weui-cell__ft weui-cell_ft_in-access" style="font-size: 0">
-            <view style="display: inline-block;vertical-align:middle; font-size: 17px;">
+          <view class="weui-cell__ft weui-cell__ft_in-access badge-font-0">
+            <view class="right-content">
               详细信息
             </view>
-            <view class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px"></view>
+            <view class="weui-badge weui-badge_dot"></view>
           </view>
         </view>
       </view>
 
       <view class="weui-cells__title">未读数红点跟在主题信息后，统一在列表左侧</view>
       <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell">
-          <view class="weui-cell__hd" style="position: relative;margin-right: 10px;">
-            <image src="../images/pic_160.png" style="width: 50px; height: 50px; display: block"/>
-            <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+        <view class="weui-cell badge-with-img">
+          <view class="weui-cell__hd">
+            <image src="../images/pic_160.png"/>
+            <view class="weui-badge">8</view>
           </view>
           <view class="weui-cell__bd">
             <view>联系人名称</view>
-            <view style="font-size: 13px; color: #888888;">摘要信息</view>
+            <view class="text-desc">摘要信息</view>
           </view>
         </view>
 
         <view class="weui-cell weui-cell_access">
-          <view class="weui-cell__bd">
-            <view style="display: inline-block; vertical-align: middle">单行列表</view>
-            <view class="weui-badge" style="margin-left: 8px">8</view>
-          </view>
-          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </view>
-
-        <view class="weui-cell weui-cell_access">
-          <view class="weui-cell__bd">
-            <view style="display: inline-block; vertical-align: middle">单行列表</view>
-            <view class="weui-badge" style="margin-left: 8px">8</view>
+          <view class="weui-cell__bd cell-badge-line">
+            <view class="text-content">单行列表</view>
+            <view class="weui-badge">8</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
 
         <view class="weui-cell weui-cell_access">
-          <view class="weui-cell__bd">
-            <view style="display: inline-block; vertical-align: middle">单行列表</view>
-            <view class="weui-badge" style="margin-left: 5px">New</view>
+          <view class="weui-cell__bd cell-badge-line">
+            <view class="text-content">单行列表</view>
+            <view class="weui-badge">8</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+
+        <view class="weui-cell weui-cell_access">
+          <view class="weui-cell__bd cell-badge-line">
+            <view class="text-content">单行列表</view>
+            <view class="weui-badge badge-news">New</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
